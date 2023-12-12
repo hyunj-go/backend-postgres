@@ -4,7 +4,8 @@
   "info": {
     "singularName": "review",
     "pluralName": "reviews",
-    "displayName": "Review"
+    "displayName": "Review",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,22 +16,17 @@
       "type": "string",
       "required": true
     },
-    "rating": {
-      "type": "enumeration",
-      "enum": [
-        "one",
-        "two",
-        "three",
-        "four",
-        "five"
-      ],
-      "required": true
-    },
     "bakery": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::bakery.bakery",
       "inversedBy": "reviews"
+    },
+    "rating": {
+      "type": "decimal",
+      "max": 5,
+      "min": 0,
+      "required": true
     }
   }
 }
