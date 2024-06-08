@@ -27,6 +27,15 @@
       "max": 5,
       "min": 0,
       "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": false,
+      "unique": false
+    },
+    "username": {
+      "type": "string",
+      "unique": false
     }
   }
 }
